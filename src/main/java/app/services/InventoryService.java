@@ -1,9 +1,7 @@
-package services;
+package app.services;
 
-import model.Inventory;
+import app.model.Inventory;
 import org.springframework.stereotype.Service;
-
-import java.util.ArrayList;
 
 @Service
 public class InventoryService {

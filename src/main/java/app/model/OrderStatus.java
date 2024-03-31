@@ -1,16 +1,22 @@
-package model;
+package app.model;
 
-public class Order {
+public class OrderStatus {
     private String orderId;
-    private String userId;
-    private int quantity;
-    private double amount;
-    private String coupon;
-    private String date;
-    private String transactionId;
-    private String status;
 
-    public Order(String orderId, String date, String coupon, double amount) {
+    public String getUserId() {
+        return userId;
+    }
+
+    public void setUserId(String userId) {
+        this.userId = userId;
+    }
+
+    private String userId;
+    private double amount;
+    private String date;
+    private String coupon;
+
+    public OrderStatus(String orderId, String message) {
     }
 
     public String getOrderId() {
@@ -21,22 +27,6 @@ public class Order {
         this.orderId = orderId;
     }
 
-    public String getUserId() {
-        return userId;
-    }
-
-    public void setUserId(String userId) {
-        this.userId = userId;
-    }
-
-    public int getQuantity() {
-        return quantity;
-    }
-
-    public void setQuantity(int quantity) {
-        this.quantity = quantity;
-    }
-
     public double getAmount() {
         return amount;
     }
@@ -45,20 +35,20 @@ public class Order {
         this.amount = amount;
     }
 
-    public String getCoupon() {
-        return coupon;
-    }
-
-    public void setCoupon(String coupon) {
-        this.coupon = coupon;
-    }
-
     public String getDate() {
         return date;
     }
 
     public void setDate(String date) {
         this.date = date;
+    }
+
+    public String getCoupon() {
+        return coupon;
+    }
+
+    public void setCoupon(String coupon) {
+        this.coupon = coupon;
     }
 
     public String getTransactionId() {
@@ -76,4 +66,7 @@ public class Order {
     public void setStatus(String status) {
         this.status = status;
     }
+
+    private String transactionId;
+    private String status;
 }

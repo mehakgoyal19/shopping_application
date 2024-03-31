@@ -1,21 +1,16 @@
-package model;
+package app.model;
 
-public class OrderResponse {
+public class Order {
     private String orderId;
     private String userId;
+    private int quantity;
+    private double amount;
+    private String coupon;
+    private String date;
+    private String transactionId;
+    private String status;
 
-    public OrderResponse() {
-    }
-
-    public OrderResponse(String orderId, String userId, int quantity, double amount, String coupon) {
-        this.orderId = orderId;
-        this.userId = userId;
-        this.quantity = quantity;
-        this.amount = amount;
-        this.coupon = coupon;
-    }
-
-    public OrderResponse(String message) {
+    public Order(String orderId, String date, String coupon, double amount) {
     }
 
     public String getOrderId() {
@@ -58,7 +53,27 @@ public class OrderResponse {
         this.coupon = coupon;
     }
 
-    private int quantity;
-    private double amount;
-    private String coupon;
+    public String getDate() {
+        return date;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
+    }
+
+    public String getTransactionId() {
+        return transactionId;
+    }
+
+    public void setTransactionId(String transactionId) {
+        this.transactionId = transactionId;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
 }

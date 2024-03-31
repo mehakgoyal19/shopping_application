@@ -1,6 +1,6 @@
-package services;
+package app.services;
 
-import model.Coupon;
+import app.model.Coupon;
 import org.springframework.stereotype.Service;
 
 @Service
